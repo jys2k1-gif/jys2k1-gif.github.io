@@ -46,6 +46,7 @@ jobs:
         run: npx quartz plugin install
         
       - name: Check types and style
+        run: npm run check
 
       - name: Build Quartz
         run: npx quartz build -d public -v
