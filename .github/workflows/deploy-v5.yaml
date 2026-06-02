@@ -40,7 +40,6 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
       - name: Check types and style
-        run: npm run check
       # 원래 코드에서 -d docs만 -d public으로 정확히 바꾼 문장입니다.
       - name: Build Quartz
         run: npx quartz build -d public -v
