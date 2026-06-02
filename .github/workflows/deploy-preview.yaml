@@ -35,3 +35,12 @@ jobs:
           projectName: quartz
           deploymentName: Branch Preview
           directory: ${{ steps.preview-build-artifact.outputs.download-path }}
+
+      - name: Deploy to Cloudflare Pages
+        uses: AdrianGonz97/refined-cf-pages-action@v1
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          projectName: quartz
+          deploymentName: v5 Branch Preview
+          branch: v5
+          directory: public
