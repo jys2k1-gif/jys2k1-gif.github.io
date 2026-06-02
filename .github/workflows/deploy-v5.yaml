@@ -52,7 +52,6 @@ jobs:
         run: npx quartz build -d docs -v
 
       - name: Deploy to Cloudflare Pages
-        if: false
         uses: AdrianGonz97/refined-cf-pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
